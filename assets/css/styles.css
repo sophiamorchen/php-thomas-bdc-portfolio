@@ -40,10 +40,10 @@ main {
     position: sticky;
     top: 0;
     width: 100%;
-    background: #111;
+    background: rgba(17, 16, 16, 0.829);
     padding: 1rem 8%;
     z-index: 1000;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(20, 20, 20, 0.719);
 }
 
 .header-container {
@@ -137,7 +137,9 @@ main {
 
 }
 
-/* ====== HERO ======= */
+/* ==============================
+HERO SECTION
+================================= */
 .hero-section {
     display: flex;
     align-items: center;
@@ -145,10 +147,12 @@ main {
     gap: 3rem;
 
     padding: 4rem 8%;
-    min-height: 80vh;
+    min-height: 60vh;
 
-    background: linear-gradient(135deg, #111 0%, #1c1c1c 100%);
+    background: linear-gradient(135deg, #1f1a1aab 0%, #5f5f5f 100%);
     color: #fff;
+    border-radius: 2%;
+    margin: 1rem;
 }
 
 .hero-content {
@@ -183,13 +187,16 @@ main {
     transform: scale(1.03);
 }
 /* ==============================
-   PROJECTS SECTION
+PROJECTS SECTION
 ================================= */
 
 .projects {
     padding: 4rem 8%;
-    background: #0f0f0f;
+    background: linear-gradient(270deg, #9c9797, #685050 100%);
+    box-shadow: 0 20px 20px rgba(110, 110, 110, 0.719);
     color: #fff;
+    margin: 2rem;
+    border-radius: 10px;
 }
 
 .projects__title {
@@ -210,7 +217,7 @@ main {
 }
 
 /* ==============================
-   PROJECT LIST
+PROJECT LIST
 ================================= */
 
 .projects__list {
@@ -222,7 +229,7 @@ main {
 }
 
 /* ==============================
-   PROJECT CARD
+PROJECT CARD
 ================================= */
 
 .project-card {
@@ -297,6 +304,101 @@ main {
 }
 
 /* ==============================
+   FONT AWESOME ICONS
+================================= */
+.fa-solid, .fa-brands {
+    margin-right: .2rem;
+}
+
+/* ==============================
+   SKILLS SECTION
+================================= */
+.skills {
+    padding: 4rem 8%;
+    background: linear-gradient(270deg, #292626, #111111 100%);
+    box-shadow: 0 20px 20px rgba(110, 110, 110, 0.719);
+    color: #fff;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.skills__title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.skills__title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #ffc107;
+    display: block;
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+/* ==============================
+   SKILLS LIST
+================================= */
+.skills__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+/* ==============================
+   SKILL CARD
+================================= */
+.skill-card {
+    background: #a5a3a3;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 150px;
+    height: 150px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    border: 2px solid rgba(255, 193, 7, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 193, 7, 0.3);
+    background: #4a4a4a;
+    border-color: rgba(26, 25, 22, 0.3);
+}
+
+.skill-card__title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+.skill-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: filter 0.3s ease;
+}
+
+.skill-card:hover img {
+    filter: drop-shadow(0 4px 8px rgba(255, 193, 7, 0.5));
+}
+
+/* ==============================
    RESPONSIVE
 ================================= */
 
@@ -312,12 +414,26 @@ main {
     .project-card__links {
         flex-direction: column;
     }
+
+    .skills {
+        padding: 3rem 5%;
+    }
+
+    .skills__list {
+        gap: 1.5rem;
+    }
+
+    .skill-card {
+        width: 120px;
+        height: 120px;
+        padding: 1.5rem;
+    }
 }
 /* =========================
    FOOTER
 ========================= */
 .site-footer {
-    background: #0a0a0a;
+    background: rgba(17, 16, 16, 0.829);
     color: #ccc;
     padding: 1rem 4%;
 }
